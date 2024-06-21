@@ -1,0 +1,77 @@
+.nav-link {
+  color: #fff;
+}
+
+.nav-link#home {
+  color: #009ad8;
+  border: 1px solid #009ad8;
+  border-radius: 10px;
+}
+
+.navbar-brand {
+  width: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  height: 70vh;
+  background-image: url("/banner.png");
+  background-size: cover;
+}
+
+ion-icon[name="cloudy-outline"] {
+  font-size: 35px;
+}
+
+.main {
+  position: relative;
+  background-color: #1e202b;
+  z-index: 1;
+}
+
+.search-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchInput {
+  background-color: #1e202b;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+#searchInput::placeholder {
+  padding-left: 0.4rem;
+}
+
+.row {
+  position: relative;
+  z-index: 1;
+}
+
+.col-lg-4 {
+  padding: 2rem;
+  z-index: 3;
+}
+
+footer {
+  background-color: #262936;
+}
+
+.card {
+  z-index: 4;
+}
+
+#subscribe {
+  background-color: #1e202b;
+}

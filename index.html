@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg p-3 bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <ion-icon name="cloudy-outline"></ion-icon>
+            Weather</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fa-solid fa-bars text-white"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav w-100 d-flex justify-content-end pe-3 gap-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  id="home"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Live Cameras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="search-box py-4">
+        <input
+          class="w-75 py-3"
+          type="text"
+          id="searchInput"
+          placeholder="Write A Location.."
+        />
+      </div>
+    </header>
+    <main id="main" class="container-fluid main">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 py-4">
+            <div class="card text-bg-dark mb-3 w-100">
+              <div
+                class="card-header d-flex justify-content-between bg-dark text-white align-items-center"
+              >
+                <p class="day"></p>
+                <p id="month"></p>
+              </div>
+              <div
+                class="card-body bg-dark text-white d-flex flex-column justify-content-center align-items-center"
+              >
+                <h1 id="city" class="card-title h5 text-start"></h1>
+                <h2 id="mainDegree" class="card-text h1 fs-1 fw-bolder"></h2>
+                <img id="todayIcon" src="" alt="today-icon" />
+                <p id="todayState" class="text-primary"></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 py-4">
+            <div class="card text-bg-dark mb-3 w-100">
+              <div
+                class="card-header d-flex justify-content-center bg-dark text-white align-items-center"
+              >
+                <p class="day text-center"></p>
+              </div>
+              <div
+                class="card-body bg-dark text-white d-flex flex-column justify-content-center align-items-center"
+              >
+                <img src="" class="w-25" alt="weather-icon" id="2nd-icon" />
+                <h1 id="maxDegree1" class="card-title text-start"></h1>
+                <h2 id="minDegree1" class="card-text fw-bolder h6"></h2>
+                <p id="weatherState1" class="text-primary">weather Sate</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 py-4">
+            <div class="card text-bg-dark mb-3 w-100">
+              <div class="card-header bg-dark text-white">
+                <p class="day text-center">Day Name</p>
+              </div>
+              <div
+                class="card-body bg-dark text-white d-flex flex-column justify-content-center align-items-center"
+              >
+                <img src="" alt="weather-icon" id="3rd-icon" />
+                <h1
+                  id="maxDegree2"
+                  class="card-title fw-bolder text-start"
+                ></h1>
+                <h2 id="minDegree2" class="card-text h6"></h2>
+                <p id="weatherState2" class="text-primary"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="container-fluid p-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <input
+            type="text"
+            name="subscribe"
+            class="py-2 rounded-5 border-0 w-75"
+            id="subscribe"
+            placeholder="Enter Your Email.."
+          />
+          <button class="btn btn-primary py-2 rounded-4">Subscribe</button>
+        </div>
+        <div class="col-lg-6 d-flex justify-content-center gap-2">
+          <i class="fa-brands fa-facebook text-white fs-1"></i>
+          <i class="fa-brands fa-twitter text-white fs-1"></i>
+          <i class="fa-brands fa-google-plus-g text-white fs-1"></i>
+          <i class="fa-brands fa-pinterest text-white fs-1"></i>
+        </div>
+      </div>
+    </footer>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
